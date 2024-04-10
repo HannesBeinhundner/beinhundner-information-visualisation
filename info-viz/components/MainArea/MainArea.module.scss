@@ -1,0 +1,48 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_mixins.scss";
+
+.container {
+    background: $background-container;
+    box-shadow: $inner-shadow;
+    border: solid 1px $grey-dark;
+    padding: 1.35rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Two columns
+    grid-template-rows: min-content 1fr min-content; 
+    gap: 1.2rem;
+    height: calc(100vh - 2.7rem); // Subtract the padding from the full viewport height
+    overflow-y: auto;
+}
+
+.card {
+    min-height: 200px; // Set a minimum height for all cards
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // Add other styles as necessary for the card
+}
+
+.topLeft {
+    grid-column: 1; // First column
+    grid-row: 1; // Second row (below the header)
+}
+
+.topRight {
+    grid-column: 2; // Second column
+    grid-row: 1; // Second row (same as topLeft)
+}
+
+.bottomLeft {
+    grid-column: 1; // First column
+    grid-row: 3; // Third row
+}
+
+.center {
+    grid-column: 1 / -1; // Span full width of the grid
+    grid-row: 2; // Third row
+}
+
+.bottomRight {
+    grid-column: 2; // Second column
+    grid-row: 3; // Third row (same as bottomLeft)
+}

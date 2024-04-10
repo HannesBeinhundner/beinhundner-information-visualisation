@@ -1,0 +1,22 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.container {
+    background-color: $black;
+    height: 100vh; // Ensure it fills the full viewport height
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr; // Single column layout
+    grid-template-rows: min-content auto; // Header size content and then the rest of the space
+}
+
+.topArea {
+    grid-column: 1; // Span the full width
+    grid-row: 1; // Place it in the first row
+}
+
+.mainArea {
+    grid-column: 1; // Span the full width
+    grid-row: 2; // Place it in the second row
+    overflow-y: auto; // Add scrolling if content overflows
+}

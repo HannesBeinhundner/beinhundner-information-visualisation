@@ -1,0 +1,44 @@
+{
+  "name": "info-viz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@hookform/resolvers": "^3.3.4",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@mui/material-nextjs": "^5.15.11",
+    "autoprefixer": "^10.4.19",
+    "chart.js": "^4.4.2",
+    "csv-parse": "^5.5.5",
+    "d3-geo": "^3.1.1",
+    "geist": "^1.3.0",
+    "next": "14.1.4",
+    "papaparse": "^5.4.1",
+    "postcss": "^8.4.38",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.2",
+    "react-simple-maps": "^3.0.0",
+    "recharts": "^2.12.4",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-simple-maps": "^3.0.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "typescript": "^5"
+  }
+}
