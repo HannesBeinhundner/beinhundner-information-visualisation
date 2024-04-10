@@ -20,12 +20,10 @@
 }
 
 .contentArea {
-    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    gap: 0.3rem;
+    align-items: flex-start;
+    height: auto; 
 
     .emptyProjectArea {
         margin-top: 4rem;
@@ -48,4 +46,50 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.8rem;
+  }
+  
+  .tooltip.visible {
+    opacity: 1;
+  }
+
+  .mapContainer {
+    width: 70%;
+    height: auto;
+  }
+  
+  .legend {
+    width: 30%;
+    margin-left: 2%;
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-bottom: 5px;
+}
+
+.legendColor {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 10px;
 }

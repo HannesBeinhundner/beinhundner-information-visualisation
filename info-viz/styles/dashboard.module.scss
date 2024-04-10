@@ -3,20 +3,20 @@
 
 .container {
     background-color: $black;
-    height: 100vh; // Ensure it fills the full viewport height
+    height: 100vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr; // Single column layout
-    grid-template-rows: min-content auto; // Header size content and then the rest of the space
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content auto;
 }
 
 .topArea {
-    grid-column: 1; // Span the full width
-    grid-row: 1; // Place it in the first row
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .mainArea {
-    grid-column: 1; // Span the full width
-    grid-row: 2; // Place it in the second row
-    overflow-y: auto; // Add scrolling if content overflows
+    grid-column: 1;
+    grid-row: 2;
+    overflow-y: auto;
 }

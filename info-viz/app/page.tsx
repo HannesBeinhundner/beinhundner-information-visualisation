@@ -4,6 +4,7 @@ import MainArea from "@/components/MainArea/MainArea";
 import CasesAustriaCard from "@/components/CasesAustriaCard/CasesAustriaCard";
 import FormsCasesAustriaCard from "@/components/FormsCasesAustriaCard/FormsCasesAustriaCard";
 import WorldStatisticsCard from "@/components/WorldStatisticsCard/WorldStatisticsCard";
+import ReportedClarifiedCard from "@/components/ReportedClarifiedCard/ReportedClarifiedCard";
 import styles from "@/styles/dashboard.module.scss";
 
 export default async function Dashboard() {
@@ -17,9 +18,8 @@ export default async function Dashboard() {
                 <MainArea
                     topLeftComponent={<CasesAustriaCard />}
                     topRightComponent={<FormsCasesAustriaCard />}
-                    centerComponent={<WorldStatisticsCard />} // Pass the new big card component here
-                    bottomLeftComponent={<WorldStatisticsCard />} // Assuming this is the component you want
-                    bottomRightComponent={<CasesAustriaCard />} // Another component for the right side
+                    centerComponent={<ReportedClarifiedCard />}
+                    bottomComponent={<WorldStatisticsCard />}
                 />
             </div>
         </div>

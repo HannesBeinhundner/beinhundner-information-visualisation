@@ -60,7 +60,7 @@ export default function YourProjectCard() {
   return (
     <div className={styles.container}>
       <div className={styles.headerArea}>
-        <h2>Forms of Cybercrime Cases</h2>
+        <h3>Forms of Cybercrime Cases</h3>
       </div>
       <div className={styles.contentArea}>
         <ResponsiveContainer width="100%" height={400}>

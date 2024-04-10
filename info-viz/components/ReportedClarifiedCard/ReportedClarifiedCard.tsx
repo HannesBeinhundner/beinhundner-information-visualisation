@@ -1,58 +1,35 @@
-"use client";
+"use client"
 
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-import {
-  Radar,
-  RadarChart,
-  PolarGrid,
-  PolarAngleAxis,
-  PolarRadiusAxis,
-  ResponsiveContainer,
-  Legend,
-  Tooltip,
-} from 'recharts';
-import styles from './FormsCasesAustriaCard.module.scss';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import styles from "./ReportedClarifiedCard.module.scss";
 
 interface DataItem {
-  category: string;
-  '2021': number;
-  '2022': number;
+  year: string;
+  reports: number;
+  clarified: number;
 }
 
-const CustomTooltip = ({ active, payload, label }: any) => {
-  if (active && payload && payload.length) {
-    const data = payload[0].payload;
-    return (
-      <div className="custom-tooltip" style={{ backgroundColor: '#fff', padding: '5px', color: '#000' }}>
-        <p className="label">{`${label}`}</p>
-        <p className="label" style={{ color: '#8884d8' }}>{`2021: ${data['2021']}%`}</p>
-        <p className="label" style={{ color: '#82ca9d' }}>{`2022: ${data['2022']}%`}</p>
-      </div>
-    );
-  }
-
-  return null;
-};
-
-export default function YourProjectCard() {
+export default function Cases() {
   const [data, setData] = useState<DataItem[]>([]);
 
   useEffect(() => {
-    fetch('/data/FormsOfCasesAustria.csv')
-      .then((response) => response.text())
-      .then((csv) => {
+    fetch('/data/ReportedClarifiedCases.csv')
+      .then(response => response.text())
+      .then(csv => {
         Papa.parse(csv, {
           header: true,
           dynamicTyping: true,
+          skipEmptyLines: true,
           complete: (result) => {
             const parsedData: DataItem[] = result.data.map((row: any) => ({
-              category: row.Type,
-              '2021': row['2021'],
-              '2022': row['2022'],
+              year: row.year,
+              reports: parseInt(row.reports.replace(/,/g, ''), 10),
+              clarified: parseInt(row.clarified.replace(/,/g, ''), 10),
             }));
             setData(parsedData);
-          },
+          }
         });
       });
   }, []);
@@ -60,19 +37,19 @@ export default function YourProjectCard() {
   return (
     <div className={styles.container}>
       <div className={styles.headerArea}>
-        <h2>Forms of Cybercrime Cases</h2>
+        <h3>Reported and solved cases of cybercrime in Austria</h3>
       </div>
       <div className={styles.contentArea}>
-        <ResponsiveContainer width="100%" height={400}>
-          <RadarChart outerRadius={150} data={data}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="category" tick={{ fontSize: '10px', fill: '#fff' }} />
-            <PolarRadiusAxis angle={30} domain={[0, 'auto']} />
-            <Radar name="2021" dataKey="2021" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-            <Radar name="2022" dataKey="2022" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
+        <ResponsiveContainer width="100%" height={300}>
+          <LineChart data={data}>
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="year" />
+            <YAxis />
+            <Tooltip />
             <Legend />
-            <Tooltip content={<CustomTooltip />} />
-          </RadarChart>
+            <Line type="monotone" dataKey="reports" stroke="#8884d8" activeDot={{ r: 8 }} />
+            <Line type="monotone" dataKey="clarified" stroke="#82ca9d" />
+          </LineChart>
         </ResponsiveContainer>
       </div>
     </div>

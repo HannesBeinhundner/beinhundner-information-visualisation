@@ -7,14 +7,10 @@ $desktop: $tablet + 1;
 $white: #EDEDED;
 $black: #161616;
 $black-light: #1C1C1C;
-$grey-dark: #3b3b3b; // #1C1C1C; // Gray-2
-$grey-light: #f6f6f6; // #232323; //Gray-1
-$blue: #007DFF; //CTA-Farbe 1
-$blue-dark: #0057B2; // CTA-1 Hover
-$highlight: #6F2931;
-$error: #F44336;
-$warning: #FF9800;
-$succuess: #4CAF50;
+$grey-dark: #3b3b3b;
+$grey-light: #f6f6f6;
+$blue: #007DFF;
+$blue-dark: #0057B2;
 
 // SHADOWS
 $container-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

@@ -12,6 +12,11 @@
     padding-left: 5px;
 }
 
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+}
+
 .headline {
     font-size: 24px;
     font-weight: bold;

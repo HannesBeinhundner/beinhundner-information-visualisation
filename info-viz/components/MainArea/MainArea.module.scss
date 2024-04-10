@@ -32,17 +32,12 @@
     grid-row: 1; // Second row (same as topLeft)
 }
 
-.bottomLeft {
-    grid-column: 1; // First column
+.bottom {
+    grid-column: 1 / -1; // First column
     grid-row: 3; // Third row
 }
 
 .center {
     grid-column: 1 / -1; // Span full width of the grid
     grid-row: 2; // Third row
-}
-
-.bottomRight {
-    grid-column: 2; // Second column
-    grid-row: 3; // Third row (same as bottomLeft)
 }

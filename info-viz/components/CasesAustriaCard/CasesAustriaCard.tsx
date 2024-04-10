@@ -34,7 +34,7 @@ export default function Cases() {
   return (
     <div className={styles.container}>
       <div className={styles.headerArea}>
-        <h2>Cybercrime Cases in Austria</h2>
+        <h3>Reported Cases in Austria</h3>
       </div>
       <div className={styles.contentArea}>
         <ResponsiveContainer width="100%" height={300}>

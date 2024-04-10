@@ -18,18 +18,6 @@ const themeOptions: ThemeOptions = {
         fontFamily: inter.style.fontFamily,
     },
     palette: {
-        // background: {
-        //     // pink
-        //     default: "#f8bbd0",
-        // },
-        // primary: {
-        //     main: "#1976d2",
-        // },
-        // text: {
-        //     primary: "#EDEDED",
-        //     secondary: "#161616",
-
-        // },
     },
 };
 

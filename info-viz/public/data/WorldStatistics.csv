@@ -1,9 +1,9 @@
-Nation,victims in mill
-India,243.6
-USA,130.5
-Japan,22.4
-Germany,21.4
-Great Britain,17.9
-France,17.6
-Australia,8.3
-New Zealand,1.5
+Nation,victims in mill,coordinates,color
+India,243.6,"78.9629,20.5937",#3366cc
+USA,130.5,"-97.0,38.0",#dc3912
+Japan,22.4,"138.2529,36.2048",#ff9900
+Germany,21.4,"10.4515,51.1657",#109618
+Great Britain,17.9,"-1.1743,52.3555",#990099
+France,17.6,"2.2137,46.2276",#3b3eac
+Australia,8.3,"133.7751,-25.2744",#0099c6
+New Zealand,1.5,"174.885971,-40.900557",#dd4477
